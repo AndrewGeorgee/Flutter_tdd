@@ -2,11 +2,11 @@ import 'package:flutter/foundation.dart';
 import '../models/todo.dart';
 import '../models/priority.dart';
 import '../models/todo_filter.dart';
-import '../repositories/todo_repository.dart';
+import '../repositories/todo_repository_interface.dart';
 import 'package:uuid/uuid.dart';
 
 class TodoService extends ChangeNotifier {
-  final TodoRepository _repository;
+  final TodoRepositoryInterface _repository;
   final List<Todo> _todos = [];
   final List<Todo> _filteredTodos = [];
   TodoFilter _currentFilter = const TodoFilter();

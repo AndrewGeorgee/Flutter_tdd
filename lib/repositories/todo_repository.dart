@@ -1,8 +1,9 @@
 import '../models/todo.dart';
 import '../models/priority.dart';
 import '../models/todo_filter.dart';
+import 'todo_repository_interface.dart';
 
-class TodoRepository {
+class TodoRepository implements TodoRepositoryInterface {
   final List<Todo> _todos = [];
 
   Future<List<Todo>> getAllTodos() async {
